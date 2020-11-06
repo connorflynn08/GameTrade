@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sell_game.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sell_game.price %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @sell_game.string %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sell_game.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sell_game.user_id %>
+</p>
+
+<% if can? :update, @sell_games %> <%= link_to 'Edit', edit_sell_game_path(@sell_game) %> | <% end %>
+<%= link_to 'Back', sell_games_path %>

@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 gem 'pg'
 
+gem 'cancancan'
+
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
