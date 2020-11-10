@@ -1,26 +1,22 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://blogfonts.com/css/aWQ9ODEwNCZzdWI9MTA0JmM9diZ0dGY9dmFyaWFuZS1zY3JpcHQucmVndWxhci50dGYmbj12YXJpYW5lLXNjcmlwdC1yZWd1bGFy/Variane Script Regular.ttf" rel="stylesheet" type="text/css"/>
 </head>
-<% if current_user %>
-    <%= link_to ' Sign out |  ', destroy_user_session_path, method: :delete %>
-
-    <%= link_to '| Sell | ', new_sell_game_path %>
-
-    <%= link_to 'All Listings', sell_games_path %>
-<% else %>
-    <%= link_to 'Sign up', new_user_registration_path %>
-
-    <%= link_to 'Sign in', new_user_session_path %>
-<% end %>
-
-
-
-<h1>GameTrade</h1>
+<body id="indexbody">
+<%= render "devise/shared/navbar" %>
 <br>
 <br>
+<%= image_tag "cover.png", class: "coverimg"%>
+<h3>Welcome to GameTrade! Start a search for a new game below</h3>
+<div class="searchdiv">
 <form class="example" action="/search" id="searchbar">
   <input type="text" placeholder="Search.." name="q" aria-label="Search">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-
+</div>
+</body>
