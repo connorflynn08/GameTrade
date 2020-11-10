@@ -10,10 +10,6 @@
   <%= @sell_game.price %>
 </p>
 
-<p>
-  <strong>String:</strong>
-  <%= @sell_game.string %>
-</p>
 
 <p>
   <strong>Description:</strong>
@@ -22,7 +18,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @sell_game.user_id %>
+  <%= @sell_game.user.email %>
 </p>
 
 <% if can? :update, @sell_games %> <%= link_to 'Edit', edit_sell_game_path(@sell_game) %> | <% end %>

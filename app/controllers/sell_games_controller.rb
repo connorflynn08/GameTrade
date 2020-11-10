@@ -70,6 +70,7 @@ class SellGamesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sell_game_params
-      params.require(:sell_game).permit(:title, :price, :string, :description, :user_id)
+      params.fetch(:sell_game, :picture)
+      params.require(:sell_game).permit(:title, :price, :description, :user_id, :picture)
     end
 end
