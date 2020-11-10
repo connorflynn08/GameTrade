@@ -1,8 +1,13 @@
-<h1>Pages/Index</h1>
-
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <% if current_user %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <%= link_to 'Sell', sell_games_path %>
+    <%= link_to ' Sign out |  ', destroy_user_session_path, method: :delete %>
+
+    <%= link_to '| Sell | ', new_sell_game_path %>
+
+    <%= link_to 'All Listings', sell_games_path %>
 <% else %>
     <%= link_to 'Sign up', new_user_registration_path %>
 
@@ -10,4 +15,12 @@
 <% end %>
 
 
+
+<h1>GameTrade</h1>
+<br>
+<br>
+<form class="example" action="/search" id="searchbar">
+  <input type="text" placeholder="Search.." name="q" aria-label="Search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 

@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 gem 'pg'
 
+gem 'sunspot_rails'
+
 gem 'cancancan'
 
 gem 'devise'

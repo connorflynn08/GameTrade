@@ -4,8 +4,12 @@ class SellGamesController < ApplicationController
 
   # GET /sell_games
   # GET /sell_games.json
-  def index
+  def _index
     @sell_games = SellGame.all
+  end
+
+  def search 
+    @sell_games = SellGame.where("title LIKE ?", "%" + params[:q] + "%")
   end
 
   # GET /sell_games/1
