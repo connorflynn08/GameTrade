@@ -12,6 +12,10 @@ class SellGamesController < ApplicationController
     @sell_games = SellGame.where("title LIKE ?", "%" + params[:q] + "%")
   end
 
+  def mygames
+    @sell_games = current_user.sell_games.all  
+  end
+
   # GET /sell_games/1
   # GET /sell_games/1.json
   def show

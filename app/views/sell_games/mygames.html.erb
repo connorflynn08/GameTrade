@@ -1,0 +1,34 @@
+<h1> My Games </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Seller</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sell_games.each do |sell_game| %>
+      <tr>
+        <td><%= sell_game.title %></td>
+        <td><%= sell_game.price %></td>
+        <td><%= sell_game.description %></td>
+        <td><%= sell_game.user.email %></td>
+        <td><%= image_tag sell_game.picture if sell_game.picture.attached? %> </td>
+        <td><%= link_to 'Show', sell_game %></td>
+        <td><% if can? :update, sell_game %><%= link_to 'Edit', edit_sell_game_path(sell_game) %> | <% end %></td>
+        <td><% if can? :destroy, sell_game %><%= link_to 'Destroy', sell_game, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'Post New Item', new_sell_game_path %>
+<%= link_to 'Home', root_path %>
