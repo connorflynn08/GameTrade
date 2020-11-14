@@ -20,6 +20,7 @@ a {
 
 body {
     font-family: Arial;
+    background-color: #D5DFE5;
   }
   
   * {
@@ -71,8 +72,13 @@ body {
     background: #D5DFE5;
   }
 
-  hr {
-    background: #0A014F;
+  hr.new1 {
+    border-top: 1px solid black;
+  }
+
+  hr.new2 {
+    border-top: 1px solid black;
+    margin-top: 100px;
   }
 
   .coverimg {
@@ -90,5 +96,64 @@ body {
 
   nav {
     padding-bottom: 0;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 2px;
+  }
+
+  #curh1 {
+    margin-left: 40px;
+  }
+
+  .sellcontainer {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 20%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 5px;
+  text-align: center;
+  flex-wrap: nowrap;
+  margin-top: 8%;
+  }
+
+  .imgdiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+
+  .textdiv {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 40px;
+  }
+
+  .linkdiv {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+
+
+  h2 {
+    text-align: center;
+  }
+
+  a {
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
   }
 
