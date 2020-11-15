@@ -17,7 +17,8 @@
 
 <body>
 <h1 id="curh1">Current Listings</h1>
-
+<%= link_to 'Post New Item', new_sell_game_path, id:"pni" %>
+<br>
 <hr class="new1">
     <% @sell_games.each do |sell_game| %>
     <div class="card">
@@ -38,8 +39,4 @@
 <br>
 <br>
 <br>
-<br>
-
-<%= link_to 'Post New Item', new_sell_game_path %>
-<%= link_to 'Home', root_path %>
 </body>

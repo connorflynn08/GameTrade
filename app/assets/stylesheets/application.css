@@ -96,18 +96,15 @@ body {
 
 
   #coverimg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 250px;
-    margin-left: 350px;
-    border-radius: 2px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   }
 
   #curh1 {
-    margin-left: 40px;
-    margin-top: 10px;
+    margin-left: 100px;
+    margin-top: 40px;
   }
 
   h2 {
@@ -129,8 +126,13 @@ body {
   width: 300px;
   display: inline-flex;
   margin-left: 20px;
+  margin-top: 20px;
   border-radius: 10px;
   flex-wrap: nowrap;
+}
+
+.card-img-top {
+  border-radius: 10px;;
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
@@ -147,3 +149,11 @@ navbar.navbar-inverse.navbar-fixed-top {
 }
 
 
+#pni {
+  float: right;
+  font-size: 20px;
+}
+
+a {
+  align-items: center;
+}
