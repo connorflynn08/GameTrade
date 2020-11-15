@@ -46,14 +46,6 @@ ActiveRecord::Schema.define(version: 2020_11_10_000420) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "sells", force: :cascade do |t|
-    t.string "title"
-    t.integer "price"
-    t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

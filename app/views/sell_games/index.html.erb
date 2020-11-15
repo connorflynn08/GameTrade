@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://blogfonts.com/css/aWQ9ODEwNCZzdWI9MTA0JmM9diZ0dGY9dmFyaWFuZS1zY3JpcHQucmVndWxhci50dGYmbj12YXJpYW5lLXNjcmlwdC1yZWd1bGFy/Variane Script Regular.ttf" rel="stylesheet" type="text/css"/>
+    <link href="https://blogfonts.com/css/aWQ9ODEwNCZzdWI9MTA0JmM9diZ0dGY9dmFyaWFZS1zY3JpcHQucmVndWxhci50dGYmbj12YXJpYW5lLXNjcmlwdC1yZWd1bGFy/Variane Script Regular.ttf" rel="stylesheet" type="text/css"/>
     <style>
       body {
             background-color: #D5DFE5;
@@ -19,26 +19,17 @@
 <h1 id="curh1">Current Listings</h1>
 
 <hr class="new1">
-
-<div class="sellcontainer">
     <% @sell_games.each do |sell_game| %>
-    <div class="imgdiv">
-        <p><%= image_tag sell_game.picture if sell_game.picture.attached? %>
-        
-        <div class="linkdiv">
-          <%= link_to 'Show ', sell_game %>
-          <% if can? :update, sell_game %><%= link_to 'Edit ', edit_sell_game_path(sell_game) %><% end %>  
-          <% if can? :destroy, sell_game %><%= link_to 'Destroy', sell_game, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>  
-        </div>
-        </div>
-        <div class="textdiv">
-          <h2><%= sell_game.title %></h2> 
-        <br>
-          <strong>Price: </strong><%= sell_game.price %>
-        <br>
-          <strong> Seller: </strong><%= sell_game.user.email %>
-        </div>
-        </p>
+    <div class="card">
+      <td><%= image_tag sell_game.picture, class: "card-img-top" %> </td>
+
+      <div class="card-body">
+        <h5 class="card-title"><td><%= sell_game.title %></td></h5>
+        <p class="card-text"><td><%= sell_game.description %></td></p>
+        <td><%= link_to 'Show', sell_game, class:"btn btn-primary" %></td>
+
+  </div>
+  </div>
     <% end %>
     <br>
 </div>

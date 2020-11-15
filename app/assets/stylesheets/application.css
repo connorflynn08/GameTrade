@@ -14,9 +14,8 @@
  *= require_self
  */
 
-a {
-    float: right;
-}
+ @import "bootstrap";
+
 
 body {
     font-family: Arial;
@@ -94,58 +93,22 @@ body {
     margin-top: 0;
   }
 
-  nav {
-    padding-bottom: 0;
-  }
 
-  img {
-    width: 250px;
+
+  #coverimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     height: 250px;
-    margin: 10px;
+    margin-left: 350px;
     border-radius: 2px;
   }
 
   #curh1 {
     margin-left: 40px;
+    margin-top: 10px;
   }
-
-  .sellcontainer {
-  display: flex;
-  flex-direction: row;
-  width: 95%;
-  height: 20%;
-  align-items: flex-start;
-  justify-content: flex-start;
-  border-radius: 5px;
-  text-align: center;
-  flex-wrap: nowrap;
-  margin-top: 8%;
-  }
-
-  .imgdiv {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-  }
-
-  .textdiv {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-right: 40px;
-  }
-
-  .linkdiv {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-  }
-
-
 
   h2 {
     text-align: center;
@@ -156,4 +119,31 @@ body {
     margin-left: 10px;
     float: left;
   }
+
+  .navbar-nav { 
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.card {
+  width: 300px;
+  display: inline-flex;
+  margin-left: 20px;
+  border-radius: 10px;
+  flex-wrap: nowrap;
+}
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
+  justify-content: flex-start !important;
+  padding: 0;
+}
+
+.container-fluid {
+  justify-content: flex-start;
+}
+
+navbar.navbar-inverse.navbar-fixed-top {
+  justify-content: flex-start;
+}
+
 

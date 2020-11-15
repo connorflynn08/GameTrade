@@ -1,3 +1,7 @@
+
+@import "bootstrap";
+
+
 body {
   background-color: #D5DFE5;
   color: #333;
@@ -66,4 +70,9 @@ label {
 
   html {
     background-color: #D5DFE5;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
   }

@@ -1,5 +1,10 @@
 <head>
-  <link href="https://blogfonts.com/css/aWQ9ODEwNCZzdWI9MTA0JmM9diZ0dGY9dmFyaWFuZS1zY3JpcHQucmVndWxhci50dGYmbj12YXJpYW5lLXNjcmlwdC1yZWd1bGFy/Variane Script Regular.ttf" rel="stylesheet" type="text/css"/>
+<style>
+  .navbar {
+    justify-content: flex-start;
+  }
+  }
+</style>
 </head>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -8,6 +13,7 @@
       <a class="navbar-brand">GameTrade</a>
     </div>
     <ul class="nav navbar-nav">
+          <li> <%= link_to 'Home', root_path %> </li>
        <% if current_user %>
           <li> <%= link_to 'My Listings', mygames_path %> </li>
           <li> <%= link_to 'All Listings', sell_games_path %> </li>
