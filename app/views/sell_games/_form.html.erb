@@ -1,3 +1,19 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://blogfonts.com/css/aWQ9ODEwNCZzdWI9MTA0JmM9diZ0dGY9dmFyaWFZS1zY3JpcHQucmVndWxhci50dGYmbj12YXJpYW5lLXNjcmlwdC1yZWd1bGFy/Variane Script Regular.ttf" rel="stylesheet" type="text/css"/>
+    <style>
+      body {
+            background-color: #D5DFE5;
+      }
+    </style>
+</head>
+<%= render "devise/shared/navbar" %>
+
 <%= form_with(model: sell_game, local: true) do |form| %>
   <% if sell_game.errors.any? %>
     <div id="error_explanation">
@@ -13,23 +29,23 @@
 
   <div class="field">
       <%= form.label :picture %><br />
-      <%= form.file_field :picture, accept: 'image/png, image/jpg, image/jpeg'%>
+      <%= form.file_field :picture, accept: 'image/png, image/jpg, image/jpeg', class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, class:"form-control"  %> 
   </div>
 
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
 
 

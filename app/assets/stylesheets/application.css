@@ -141,7 +141,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
 }
 
 .container-fluid {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 navbar.navbar-inverse.navbar-fixed-top {
@@ -157,3 +157,80 @@ navbar.navbar-inverse.navbar-fixed-top {
 a {
   align-items: center;
 }
+
+label {
+  display: block !important;
+  font-size: 15px;
+  margin-top: 8px;
+  text-align: center !important;
+}
+
+#signuph2 {
+  margin-top: 50px;
+  margin-bottom: 80px;;
+}
+
+.form-control {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80% !important;
+}
+
+textarea.form-control {
+  height: 150px !important;
+  
+}
+  input {
+    display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  }
+
+  #sell_game_price {
+    width: 20% !important;
+  }
+
+  h1 {
+    margin-left: 50px !important;
+    margin-top: 40px !important;
+  }
+
+  #showpic {
+    position: absolute;
+    z-index: 0;
+    width:  300px;
+    height: 300px;
+    display: inline-flex;
+    margin-right: 0;
+    margin-left: 20px;
+    margin-top: 100px;
+    border-radius: 5px;
+  }
+
+  .textcontainer2 {
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 400px;
+    z-index: 1;
+    margin-top: 180px;
+  }
+
+  .textcontainer {
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 400px;
+    z-index: 1;
+    margin-top: 40px;
+    font-size: large;
+  }
+
+  #titles {
+    margin-top: 50px;
+  }
+
+  p {
+    font-size: large;
+  }

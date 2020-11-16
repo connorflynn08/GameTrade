@@ -1,25 +1,48 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://blogfonts.com/css/aWQ9ODEwNCZzdWI9MTA0JmM9diZ0dGY9dmFyaWFZS1zY3JpcHQucmVndWxhci50dGYmbj12YXJpYW5lLXNjcmlwdC1yZWd1bGFy/Variane Script Regular.ttf" rel="stylesheet" type="text/css"/>
+    <style>
+      body {
+            background-color: #D5DFE5;
+      }
+    </style>
+</head>
+<%= render "devise/shared/navbar" %>
+
+
+
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @sell_game.picture, id:"showpic" %>
+<div class="textcontainer2">
 <p>
-  <strong>Title:</strong>
+  <strong id="titles">Title:</strong>
   <%= @sell_game.title %>
 </p>
-
+</div>
+<div class="textcontainer">
 <p>
   <strong>Price:</strong>
   <%= @sell_game.price %>
 </p>
-
-
+</div>
+<div class="textcontainer">
 <p>
   <strong>Description:</strong>
   <%= @sell_game.description %>
 </p>
-
+</div>
+<div class="textcontainer">
 <p>
   <strong>User:</strong>
   <%= @sell_game.user.email %>
 </p>
 
+</div>
+
 <% if can? :update, @sell_games %> <%= link_to 'Edit', edit_sell_game_path(@sell_game) %> | <% end %>
-<%= link_to 'Back', sell_games_path %>
