@@ -42,8 +42,21 @@
   <strong>User:</strong>
   <%= @sell_game.user.email %>
 </p>
+<br>
 <p>
-  <%= button_to 'buy now', charges_path, method: :post %>
+<button data-stripe="payment">Buy Game <%= number_to_currency(@sell_game.price) %></button>
+
+<%= link_to 'Back', sell_games_path %>
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    document.querySelector("[data-stripe='payment']").addEventListener("click", () => {
+        const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :public_key) %>");
+        stripe.redirectToCheckout({
+            sessionId: "<%= @session_id %>"
+        });
+    });
+</script>
 </p>
 
 </div>

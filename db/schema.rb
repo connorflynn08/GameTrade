@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_11_10_000420) do
 
   create_table "sell_games", force: :cascade do |t|
     t.string "title"
-    t.string "price"
+    t.integer "price"
     t.string "string"
     t.text "description"
     t.integer "user_id"

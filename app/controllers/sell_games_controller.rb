@@ -19,6 +19,25 @@ class SellGamesController < ApplicationController
   # GET /sell_games/1
   # GET /sell_games/1.json
   def show
+    session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        customer_email: current_user.email,
+        line_items: [{
+            name: @sell_game.title,
+            description: @sell_game.description,
+            amount: @sell_game.price.to_i,
+            currency: 'aud',
+            quantity: 1,
+        }],
+        payment_intent_data: {
+            metadata: {
+                event_id: @sell_game.id
+            }
+        },
+        success_url: "#{root_url}payments/success?sell_gametId=#{@sell_game.id}",
+        cancel_url: "#{root_url}sell_games"
+    )
+    @session_id = session.id
   end
 
   # GET /sell_games/new
