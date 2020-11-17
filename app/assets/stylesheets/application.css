@@ -136,7 +136,7 @@ body {
 
 .card-img-top {
   border-radius: 10px;
-  
+  height: 300px;
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
