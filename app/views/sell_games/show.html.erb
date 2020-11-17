@@ -42,6 +42,9 @@
   <strong>User:</strong>
   <%= @sell_game.user.email %>
 </p>
+<p>
+  <%= button_to 'buy now', charges_path, method: :post %>
+</p>
 
 </div>
 

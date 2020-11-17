@@ -13,6 +13,7 @@ gem 'devise'
 
 gem 'bootstrap', '~> 5.0.0.alpha3'
 
+gem 'stripe'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
