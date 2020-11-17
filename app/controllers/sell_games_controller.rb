@@ -25,7 +25,7 @@ class SellGamesController < ApplicationController
         line_items: [{
             name: @sell_game.title,
             description: @sell_game.description,
-            amount: @sell_game.price.to_i,
+            amount: (@sell_game.price.to_i) * 100,
             currency: 'aud',
             quantity: 1,
         }],
