@@ -124,15 +124,19 @@ body {
 
 .card {
   width: 300px;
+  height: 300px;
   display: inline-flex;
   margin-left: 20px;
   margin-top: 20px;
   border-radius: 10px;
   flex-wrap: nowrap;
+  background-color: #D5DFE5;
+  border: none;
 }
 
 .card-img-top {
-  border-radius: 10px;;
+  border-radius: 10px;
+  
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {

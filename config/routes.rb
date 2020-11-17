@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :sell_games
+  resources :charges
   devise_for :users
   root to: "pages#index"
   get 'pages/index' => 'pages#index'
