@@ -228,7 +228,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-jdbcpostgresql-adapter
   bootstrap (~> 5.0.0.alpha3)
   cancancan
   capybara (>= 2.15)
