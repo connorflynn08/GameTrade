@@ -124,6 +124,7 @@ body {
 
 .card {
   width: 300px;
+  height: 300px;
   display: inline-flex;
   margin-left: 20px;
   margin-top: 20px;
@@ -132,7 +133,8 @@ body {
 }
 
 .card-img-top {
-  border-radius: 10px;;
+  border-radius: 10px;
+  height: 300px;
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
