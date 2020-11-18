@@ -118,8 +118,15 @@ body {
   }
 
   .navbar-nav { 
-    flex-direction: row;
-    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    width: 100%;
+    text-align: center !important;
+    flex-shrink: 3;
+    flex-flow: row nowrap;
+    ;
+
 }
 
 .card {
@@ -132,6 +139,7 @@ body {
   flex-wrap: nowrap;
   background-color: #D5DFE5;
   border: none;
+  margin-top: 180px;
 }
 
 .card-img-top {
@@ -140,8 +148,11 @@ body {
 }
 
 nav.navbar.navbar-inverse.navbar-fixed-top {
-  justify-content: flex-start !important;
+  // justify-content: flex-start !important;
   padding: 0;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
 }
 
 .container-fluid {
